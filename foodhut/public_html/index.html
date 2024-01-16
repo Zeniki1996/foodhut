@@ -27,12 +27,8 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#home">Inicio</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">Cuenta regrsiva</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#gallary">Lugar y fecha</a>
-                </li>
+             
+               
               <!--  <li class="nav-item">
                     <a class="nav-link" href="#book-table">Book-Table</a>
                 </li>-->
@@ -43,16 +39,13 @@
             </a>
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#blog">Blog<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#testmonial">Fecha</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#testmonial">Reviews</a>
+                    <a class="nav-link" href="#contact">Lugar</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact Us</a>
-                </li>
-                <li class="nav-item">
-                    <a href="components.html" class="btn btn-primary ml-xl-4">Components</a>
+                    <a href="#book-table" class="btn btn-primary ml-xl-4">Confirmar</a>
                 </li>
             </ul>
         </div>
@@ -66,26 +59,32 @@
         </div>
     </header>
  <!-- book a table Section  -->
- <div class="container-fluid has-bg-overlay text-center text-light has-height-lg middle-items" id="book-table">
-    <div class="">
+ <form id="formulario-invitado" action="/guardar-invitado" method="post">
+    <div class="container-fluid has-bg-overlay text-center text-light has-height-lg middle-items" id="book-table">
+      <div class="">
         <h2 class="section-title mb-5">Confirma</h2>
         <div class="row mb-5">
-            <div class="col-sm-6 col-md-3 col-xs-12 my-2">
-                <input type="email" id="booktable" class="form-control form-control-lg custom-form-control" placeholder="EMAIL">
-            </div>
-            <div class="col-sm-6 col-md-3 col-xs-12 my-2">
-                <input type="number" id="booktable" class="form-control form-control-lg custom-form-control" placeholder="Cant Invitados" max="20" min="0">
-            </div>
-            <div class="col-sm-6 col-md-3 col-xs-12 my-2">
-                <input type="Name" id="booktable" class="form-control form-control-lg custom-form-control" placeholder="Nombre">
-            </div>
-            <div class="col-sm-6 col-md-3 col-xs-12 my-2">
-                <input type="LastName" id="booktable" class="form-control form-control-lg custom-form-control" placeholder="Apellido">
-            </div>
+          <div class="col-sm-6 col-md-3 col-xs-12 my-2">
+            <input type="email" name="email" class="form-control form-control-lg custom-form-control" placeholder="EMAIL" required>
+          </div>
+          <div class="col-sm-6 col-md-3 col-xs-12 my-2">
+            <input type="tel" name="telefono" class="form-control form-control-lg custom-form-control" placeholder="Número de Celular" required>
+          </div>
+          
+          <div class="col-sm-6 col-md-3 col-xs-12 my-2">
+            <input type="text" name="nombre" class="form-control form-control-lg custom-form-control" placeholder="Nombre" required>
+          </div>
+          <div class="col-sm-6 col-md-3 col-xs-12 my-2">
+            <input type="text" name="apellido" class="form-control form-control-lg custom-form-control" placeholder="Apellido" required>
+          </div>
+          <div class="col-sm-6 col-md-3 col-xs-12 my-2">
+            <input type="number" name="cantInvitados" class="form-control form-control-lg custom-form-control" placeholder="Cant Invitados" max="20" min="0" required>
+          </div>
         </div>
-        <a href="#" class="btn btn-lg btn-primary" id="rounded-btn">FIND TABLE</a>
+        <button type="button" class="btn btn-lg btn-primary" id="rounded-btn" onclick="enviarFormulario()">Confirmar</button>
+      </div>
     </div>
-</div>
+  </form>
     <!--  About Section  -->
     <div id="about" class="container-fluid wow fadeIn" id="about"data-wow-duration="1.5s">
         <div class="row">
@@ -93,18 +92,42 @@
             <div class="col-lg-6">
                 <div class="row justify-content-center">
                     <div class="col-sm-8 py-5 my-5">
-                        <h2 class="mb-4">About Us</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, quisquam accusantium nostrum modi, nemo, officia veritatis ipsum facere maxime assumenda voluptatum enim! Labore maiores placeat impedit, vero sed est voluptas!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita alias dicta autem, maiores doloremque quo perferendis, ut obcaecati harum, <br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum necessitatibus iste,
-                        nulla recusandae porro minus nemo eaque cum repudiandae quidem voluptate magnam voluptatum? <br>Nobis, saepe sapiente omnis qui eligendi pariatur. quis voluptas. Assumenda facere adipisci quaerat. Illum doloremque quae omnis vitae.</p>
-                        <p><b>Lonsectetur adipisicing elit. Blanditiis aspernatur, ratione dolore vero asperiores explicabo.</b></p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos ab itaque modi, reprehenderit fugit soluta, molestias optio repellat incidunt iure sed deserunt nemo magnam rem explicabo vitae. Cum, nostrum, quidem.</p>
+                        <h2 class="mb-4">Nosotros</h2>
+                        <p>En un pequeño pueblo, Marco, un apasionado chef, y Elena, una talentosa artista, se conocieron en una feria local. Su conexión fue instantánea, compartiendo risas y sueños bajo la luz de las estrellas. A medida que sus vidas se entrelazaban, superaron desafíos juntos, fortaleciendo su amor. Marco sorprendió a Elena con una romántica propuesta en el lugar donde se conocieron, arrodillándose con un anillo brillante. Con lágrimas de felicidad, Elena aceptó, sellando su historia de amor con la promesa de un futuro juntos.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!--  gallary Section  -->
+
+    <div class="contenedor"> 
+        <div class="contenido">
+          <div class="contador">
+            <div class="responsivo1">
+              <div class="cartel">
+              <div id="dias"></div>
+              <div class="h3"><h3>Días</h3></div>
+            </div>
+              <div class="cartel">
+              <div id="horas"></div>
+              <div class="h3"><h3>Horas</h3></div>
+            </div>
+            </div>
+            <div class="responsivo2">
+            <div class="cartel">
+              <div id="minutos"></div>
+              <div class="h3"><h3>Minutos</h3></div>
+            </div>
+            <div class="cartel">
+              <div id="segundos"></div>
+              <div class="h3"><h3>Segundos</h3></div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!--  gallary Section 
     <div id="gallary" class="text-center bg-dark text-light has-height-md middle-items wow fadeIn">
         <h2 class="section-title">OUR MENU</h2>
     </div>
@@ -181,11 +204,11 @@
                 <i class="gallary-icon ti-plus"></i>
             </a>
         </div>
-    </div>
+    </div> -->
 
    
 
-    <!-- BLOG Section  -->
+    <!-- BLOG Section 
     <div id="blog" class="container-fluid bg-dark text-light py-5 text-center wow fadeIn">
         <h2 class="section-title py-5">EVENTS AT THE FOOD HUT</h2>
         <div class="row justify-content-center">
@@ -270,9 +293,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <!-- REVIEWS Section  -->
+    <!-- REVIEWS Section  
     <div id="testmonial" class="container-fluid wow fadeIn bg-dark text-light has-height-lg middle-items">
         <h2 class="section-title my-5 text-center">REVIEWS</h2>
         <div class="row mt-3 mb-5">
@@ -304,7 +327,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
 
     <!-- CONTACT Section  -->
     <div id="contact" class="container-fluid bg-dark text-light border-top wow fadeIn">
@@ -314,7 +337,7 @@
             </div>
             <div class="col-md-6 px-5 has-height-lg middle-items">
                 <h3>FIND US</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, laboriosam doloremque odio delectus, sunt magnam laborum impedit molestiae, magni quae ipsum, ullam eos! Alias suscipit impedit et, adipisci illo quam.</p>
+                <p>Hotel Por confirmar.</p>
                 <div class="text-muted">
                     <p><span class="ti-location-pin pr-3"></span> 12345 Fake ST NoWhere, AB Country</p>
                     <p><span class="ti-support pr-3"></span> (123) 456-7890</p>
@@ -352,7 +375,8 @@
 
     <!-- bootstrap affix -->
     <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
-
+    <!-- cuenta regresiva-->
+    <script src="assets/vendors/jquery/Cuentaregrsiva.js"></script>
     <!-- wow.js -->
     <script src="assets/vendors/wow/wow.js"></script>
     
