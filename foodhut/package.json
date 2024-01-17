@@ -4,9 +4,12 @@
   "description": "An elegant responsive bootstrap 4.x theme.",
   "main": "gulpfile.js",
   "author": "DevCRUD",
+ 
   "scripts": {
-    "start": "node appForms.js"
+    "start": "node public_html/assets/vendors/jquery/appForms.js"
   },
+  
+  
   
   "devDependencies": {
     "browser-sync": "^2.26.3",
