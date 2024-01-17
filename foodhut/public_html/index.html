@@ -81,7 +81,9 @@
             <input type="number" name="cantInvitados" class="form-control form-control-lg custom-form-control" placeholder="Cant Invitados" max="20" min="0" required>
           </div>
         </div>
+        <!--<button type="button" class="btn btn-lg btn-primary" id="rounded-btn" onclick="enviarFormulario()">Confirmar</button>-->
         <button type="button" class="btn btn-lg btn-primary" id="rounded-btn" onclick="enviarFormulario()">Confirmar</button>
+
       </div>
     </div>
   </form>
@@ -370,6 +372,39 @@
     </div>
     <!-- end of page footer -->
 
+
+    <!--Script del formulario -->
+    <script>
+        async function enviarFormulario() {
+          const email = document.querySelector('input[name="email"]').value;
+          const telefono = document.querySelector('input[name="telefono"]').value;
+          const nombre = document.querySelector('input[name="nombre"]').value;
+          const apellido = document.querySelector('input[name="apellido"]').value;
+          const cantInvitados = document.querySelector('input[name="cantInvitados"]').value;
+      
+          const formData = {
+            email,
+            telefono,
+            nombre,
+            apellido,
+            cantInvitados
+          };
+      
+          // Enviar datos al servidor
+          const response = await fetch('/guardar-invitado', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+          });
+      
+          // Manejar la respuesta del servidor si es necesario
+          const result = await response.json();
+          console.log(result);
+        }
+      </script>
+      
 	<!-- core  -->
     <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
     <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
@@ -380,10 +415,8 @@
     <script src="assets/vendors/jquery/Cuentaregrsiva.js"></script>
     <!-- wow.js -->
     <script src="assets/vendors/wow/wow.js"></script>
-    
-    <!-- google maps -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtme10pzgKSPeJVJrG1O3tjR6lk98o4w8&callback=initMap"></script>
-
+    <!--Formulario-->
+    <script src="assets/vendors/jquery/appForms.js"></script>    
     <!-- FoodHut js -->
     <script src="assets/js/foodhut.js"></script>
 
