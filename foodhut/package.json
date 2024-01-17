@@ -5,7 +5,7 @@
   "main": "gulpfile.js",
   "author": "DevCRUD",
   "scripts": {
-    "start": "gulp"
+    "start": "node appForms.js"
   },
   
   "devDependencies": {
