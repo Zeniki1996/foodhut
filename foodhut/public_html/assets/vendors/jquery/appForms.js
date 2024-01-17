@@ -7,7 +7,7 @@ const port = 3000;
 
 app.use(bodyParser.json());
 
-const uri = "mongodb+srv://Zeniki2:Beta1996@clusterboda.doj7sbc.mongodb.net/Boda1DB?retryWrites=true&w=majority";
+const uri = process.env.MONGODB_URI || "mongodb+srv://Zeniki2:Beta1996@clusterboda.doj7sbc.mongodb.net/Boda1DB?retryWrites=true&w=majority";
 const client = new MongoClient(uri, {
   serverApi: {
     version: ServerApiVersion.v1,
