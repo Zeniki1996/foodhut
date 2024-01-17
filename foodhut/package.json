@@ -6,7 +6,7 @@
   "author": "DevCRUD",
  
   "scripts": {
-    "start": "node public_html/assets/vendors/jquery/appForms.js"
+    "start": "node ./public_html/assets/vendors/jquery/appForms.js"
   },
   
   
